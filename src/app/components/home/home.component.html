@@ -1,0 +1,22 @@
+<div class="container d-inline-block m-2">
+
+    <div class="btn-group">
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Load Chart
+        </button>
+        <div class="dropdown-menu dropdown-menu-right">
+            <button class="dropdown-item" type="button">Pie Chart</button>
+            <button class="dropdown-item" type="button">Bar Chart</button>
+            <button class="dropdown-item" type="button">Line Graph</button>
+        </div>
+    </div>
+    <div class="float-right ">
+        <div class="card bg-dark text-white ">
+            <div class="card-body">
+                <div class="card-text">Name: {{currentUser.name}}</div>
+                <div class="card-text">E mail: {{currentUser.email}}</div>
+                <a class="text-danger bg-dark" (click)="logout()">Logout</a>
+            </div>
+        </div>
+    </div>
+</div>

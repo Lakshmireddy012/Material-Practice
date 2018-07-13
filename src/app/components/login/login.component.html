@@ -1,0 +1,25 @@
+<div class="container m-5">
+  <div class="row justify-content-center align-items-center">
+    <form class="col-6">
+      <div class="form-group">
+        <label for="formGroupExampleInput">E mail</label>
+        <input type="email" [(ngModel)]="username" name="username" class="form-control" id="formGroupExampleInput" placeholder="username">
+      </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput2">Password</label>
+        <input type="password" [(ngModel)]="password" name="password" class="form-control" id="formGroupExampleInput2" placeholder="password">
+      </div>
+      <div class="form-group">
+        <button class="btn btn-success mr-5" (click)="login()">Login</button>
+        <a class="text-info  mx-5" href="/signup" >Sign-Up</a>
+        <a class="text-info " href="/forgotpassword">Forgot password</a>
+      </div>
+      <div class="row form-group justify-content-center ">
+        <button class="btn btn-light" (click)="signInWithGoogle()" data-toggle="tooltip" data-placement="top" title="Login with Google+"><i class="fa fa-google-plus-square fa-3x"></i></button>
+        <button class="btn btn-light" (click)="signInWithFacebook()" data-toggle="tooltip" data-placement="top" title="Login with Facebook" disabled><i class="fa fa-facebook-square fa-3x"></i></button>
+        <button class="btn btn-light" (click)="signInWithTwitter()" disabled><i class="fa fa-twitter-square fa-3x"></i></button>
+        <button class="btn btn-light" (click)="signInWithGithub()" disabled><i class="fa fa-github-square fa-3x"></i></button>
+      </div>
+    </form>   
+  </div>
+</div>

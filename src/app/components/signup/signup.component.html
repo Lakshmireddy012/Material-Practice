@@ -1,0 +1,34 @@
+<div class="container m-5">
+  <div class="row h-100 justify-content-center align-items-center">
+    <form class="col-6" #form="ngForm">
+      <div class="form-group">
+        <label for="formGroupExampleInput">Name</label>
+        <input type="text" [(ngModel)]="user.name" #Pname="ngModel" name="name" class="form-control" id="formGroupExampleInput" placeholder="username" required>
+        <label class="text-danger float-right" *ngIf="Pname.errors?.required && Pname.touched">Please enter name</label>
+      </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput2">Password</label>
+        <input type="password" [(ngModel)]="user.password" #Ppassword="ngModel" name="password" class="form-control" id="formGroupExampleInput2" placeholder="password" required>
+        <label class="text-danger float-right" *ngIf="Ppassword.errors?.required && Ppassword.touched">Please enter password</label>
+      </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput3">Re enter Password</label>
+        <input type="password" [(ngModel)]="user.repassword" #Prepassword="ngModel" name="repassword" class="form-control" id="formGroupExampleInput3" placeholder="Re enter password" required>
+        <label class="text-danger float-right" *ngIf="Prepassword.errors?.required && Prepassword.touched">Please re enter password</label>
+        <label class="text-danger float-right" *ngIf="user.repassword && user.repassword!=user.password">Password not matched</label>
+      </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput4">E mail</label>
+        <input type="email" [(ngModel)]="user.email" #Pemail="ngModel" name="email" class="form-control" id="formGroupExampleInput4" placeholder="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+        <label class="text-danger float-right" *ngIf="Pemail.errors?.required && Pemail.touched || Pemail.errors?.email">Please enter email address</label>
+        <label class="text-danger float-right" *ngIf="Pemail.errors?.pattern">Please enter valid email</label>
+      </div>
+      <div class="form-group">
+        <button [disabled]="form.form.invalid || user.repassword!=user.password" class="btn btn-success mr-5" (click)="signup()">Sign Up</button>
+        <a class="text-info" href="/login">Already have an Account</a>
+        
+      </div>
+      
+    </form>   
+  </div>
+</div>
