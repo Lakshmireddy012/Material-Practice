@@ -21,12 +21,12 @@ import { FormsModule } from '@angular/forms';
 export const environment = {
   production: false,
   firebase: {
-    apiKey: "AIzaSyD2_pBH0RDdeedPZWfw9ThHewvtdJ9d-uw",
-    authDomain: "budgetmanagement012.firebaseapp.com",
-    databaseURL: "https://budgetmanagement012.firebaseio.com",
-    projectId: "budgetmanagement012",
-    storageBucket: "budgetmanagement012.appspot.com",
-    messagingSenderId: "91638958783"
+    apiKey: "*********",
+    authDomain: "****.firebaseapp.com",
+    databaseURL: "https://*******.firebaseio.com",
+    projectId: "*****",
+    storageBucket: "*****.appspot.com",
+    messagingSenderId: "****"
   }
 };
 @NgModule({
